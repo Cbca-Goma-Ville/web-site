@@ -359,4 +359,65 @@ class AdminController extends Controller
         return view('home/events_list',['events' => $events]);   
     }
 
+    public function add_services(Request $request){
+        return view('home/add_services');
+    }
+
+    public function add_services_validation(Request $request){
+        //Validation
+
+        //Validation
+        if($request->hasFile('service_image')){
+            $service_image = $request->file('service_image');
+    
+            $picture_new_name = time().'CBCA_GV_SERVICES.'.$service_image->getClientOriginalExtension();
+
+            $image_dest = public_path('/services');
+
+            $service_image->move($image_dest,$picture_new_name);
+        }
+
+        $params = $request->all();
+        $params["service_image"] = "services/".$picture_new_name;
+
+        if($request['status'] == "on"){
+            $params['status'] = "1";
+        }else{
+            $params['status'] = "0";
+        }
+
+        $url = config('app.api_path') . 'services/add';
+        
+        $response = Http::timeout(200)
+            ->withHeaders(['X-Requested-With' => 'XMLHttpRequest'])
+            ->post($url, $params);
+        
+        if ($response->successful()) {
+
+            $url = config('app.api_path') . 'services/all';
+        
+            $response = Http::timeout(200)
+                ->withHeaders(['X-Requested-With' => 'XMLHttpRequest'])
+                ->get($url);
+
+                $services = $response['data'];
+
+            return redirect(route('home.services_list'));
+
+        }
+    }
+
+    public function services_list(Request $request){
+        $url = config('app.api_path') . 'services/all';
+        
+        $response = Http::timeout(200)
+            ->withHeaders(['X-Requested-With' => 'XMLHttpRequest'])
+            ->get($url);
+        if ($response->successful()) {
+            $services = $response['data'];
+        }
+
+        return view('home/services_list',['services' => $services]);   
+    }
+
 }

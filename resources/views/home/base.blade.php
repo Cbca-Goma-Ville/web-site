@@ -542,6 +542,20 @@
                                 </a>
                             </li>
 
+                            <li class="menu-title mt-2">Services</li>
+                            <li>
+                                <a href="{{ route('home.add_services') }}">
+                                    <i data-feather="shopping-cart"></i>
+                                    <span>Ajouter </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{ route('home.services_list') }}">
+                                    <i data-feather="shopping-cart"></i>
+                                    <span> Gerer </span>
+                                </a>
+                            </li>
+
                             <li class="menu-title mt-2">Evenements</li>
                             <li>
                                 <a href="{{ route('home.add_event') }}">

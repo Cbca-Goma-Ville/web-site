@@ -204,4 +204,25 @@ Route::prefix('home')
         })->name('events_list');
     
         // ---------- EVENTS ------------------- //
+
+        // ---------- SERVICES ----------------- //
+         // ---------- EVENTS ------------------- //
+         Route::get('/add_services', [AdminController::class, 'add_services'])
+         ->name('add_services');
+         Route::post('/add_services_validation', [AdminController::class, 'add_services_validation'])
+         ->name('add_services_validation');
+
+         Route::get('/services_list', [AdminController::class, 'services_list'], function(){
+            $url = config('app.api_path') . 'services/all';
+            $response = Http::timeout(200)
+                ->withHeaders(['X-Requested-With' => 'XMLHttpRequest'])
+                ->get($url);
+            if ($response->successful()) {
+                $services = $response['data'];
+            }
+
+            return view('chronology', ['services' => $services]);
+        })->name('services_list');
+         // ---------- EVENTS ------------------- //
+
     });
