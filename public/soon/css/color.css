@@ -1,0 +1,233 @@
+/*=========================
+	FONT COLOR
+=========================*/
+.product-carousel .owl-nav .owl-prev::before, 
+.product-carousel .owl-nav .owl-next::before,
+.product-caro .owl-prev:hover:before, 
+.product-caro .owl-next:hover:before,
+.news-letter > form button,
+.quick-links > li a:hover,
+.blog-title > a:hover,
+.feature-meta h1 span,
+.leter-meta > span,
+.quick-links > li:hover:before,
+.measure > i,
+.topbar ul.web-elements li a i,
+.friend-name > ins > a,
+.see-all,
+.friend-meta > a,
+.sidebar .widget li i,
+.c-form h4,
+.tab-content .tab-pane > a,
+.mesg-info > a:hover,
+.post-new .uploadimage,
+.quick-all .spark-meta > p,
+.exp-meta > span,
+.useravatar.active > span,
+.corss > span,
+.main-title > a,
+.dept-info > ul > li span i,
+.members > a:hover,
+.pagination > li > a,
+.question-title:hover a,
+.more-post-optns > ul > li:hover,
+.related-qst > li > a::before,
+.related-qst > li > a:hover,
+.book-about > span,
+.category > li a:hover,
+.book-post:hover > a,
+.uk-active > a,
+.course-cat > a,
+.course-title:hover,
+.course-price,
+.incldes > ul > li > i,
+.course-details > a,
+.review-item > span,
+.invoice-footer > a,
+.user-total .totalinv2 > span,
+.blog-post-meta > span,
+.tags > span,
+.event-schedule > a,
+.event-schedule > h5 > i,
+.statics-event > a,
+.event-loc > span i,
+.help-topic > span > i,
+.question-collaps .card-header button.btn,
+.help-qst > li:hover,
+.pop-articles > li:hover a,
+.pplan-links > li a,
+.table.table-striped th > ins,
+.basic_ptitle > h4,
+.cart-update > a,
+.cart-box > ul li:last-child,
+.cart-table tbody td > .edit-cart:hover,
+.cart-summary > ul li.grand-total > i,
+.prod-stat > ul > li span,
+.search-section > a,
+.attach-options > a i,
+.related-searches > li > a:hover,
+.activity-meta > h6 a,
+.twiter-feed > li > div span,
+.position-meta > span,
+.widget.web-links ul li > a:hover,
+.suggestd > li a:hover,
+.friend-meta h4 a:hover,
+.sidebar .invitepage > li figure a:hover,
+.activity-meta > span a:hover,
+.re-links-meta > h6 a:hover,
+.close-btn,
+.your-grp > a.promote,
+.widget .sponsors-ad > li .sponsor-meta h5:hover,
+.vid-course > h5 a:hover,
+.vid-course .price,
+.attach-options > a:hover,
+.grp-info > h4 > span,
+.recent-media > figure a,
+.chat-message-item > .caption i,
+.event-schedule > a.invite-co,
+table.table.table-default tbody td a:hover,
+a.invite,
+.new-comment form button i,
+.create-newroom,
+.wraper-title > span > i,
+.wraper-title > a,
+.user > a,
+.comments-area > ul > li > a,
+.reply:hover,
+#swift > h6,
+.blog-post-meta > a.button:hover,
+.pix-filter > li > a.active,
+.info-block-list > ul > li span,
+.video-lecture > li > a:hover,
+.prod-info > span,
+.prod-info > a:hover,
+.reg-from > span i,
+.walt-balance > span,
+.walt-balance > a,
+.add-currency:hover,
+.big-deals > a,
+.prod-detail > ul.item-info > li > a
+{
+	color: #088dcd;	
+}
+
+
+svg {
+    fill: rgba(8, 141, 205, 0.09);
+    stroke: #088dcd;
+}
+
+/*path.icon{
+	fill: #fff;
+}*/
+
+
+/*=========================
+	BACKGROUND COLOR
+=========================*/
+.menu-item-has-children ul.submenu > li a::before,
+.widget-title > h4::before,
+.widget-title > h4::after,
+a.date,
+#topcontrol,
+.widget-title::before,
+.loadmore > a,
+.nav.nav-tabs.slide-btns li a.active,
+.comment-titles a.reply,
+.main-title::before,
+.message-text-container form button,
+.members > a,
+.search-question > form button,
+.course > figure > em,
+.newsletter > button,
+.info-sec > i,
+.owl-dot.active::before,
+.print-share > a.print_btn,
+.ask-question > a:hover,
+.cart-update > a:hover,
+.more-attachments.active,
+.group-box > button:hover,
+.popup-innner::before,
+ul.drop-menu li a:hover,
+.socials > li:hover > i,
+.activitiez > li::before,
+.pit-tags > a:hover,
+.share-options > ul > li > a:hover,
+.share-options > ul > li > a.active,
+.follow-men > a,
+.unread .new-highlight,
+.cart-product,
+.cart-product > span,
+.chat-live,
+.chat-live > span,
+.chat-head,
+.chat-card-head,
+.text-box > button,
+table.table-striped tbody tr td a.button:hover,
+.chat-rooms li > a.join:hover,
+.restop-search,
+.chosen-container .chosen-results li.active-result:hover,
+.nightview .filtr-tabs > li > a.active,
+.add-currency,
+.walt-balance > a:hover,
+.nav.nav-tabs.walllt-btn > li > a.active,
+.card-poup-meta > button
+{
+	background: #088dcd;
+}
+
+.stroke-solid {
+	fill: #088dcd;
+}
+
+
+
+/*=========================
+	BORDER COLOR
+=========================*/
+.main-btn,
+.funfact-counter > i,
+.side-image > img,
+.popup::after,
+.tab-content .tab-pane > a,
+.new-messages li figure img,
+.commenter-photo > img,
+ul.chatting-area li > figure img,
+.members > a:hover,
+.course-details > a,
+.review-item > figure img,
+.feed-back-emojies > ul > li a:hover,
+.feed-back-emojies > ul > li a.selected,
+.light-bg .uk-tab .uk-active a,
+.link-item > a:hover,
+.link-item > a.active,
+.watchlist > li figure img,
+.event-schedule > a.invite-co,
+.chat-rooms li > a.say-hi,
+.new-comment form input:focus,
+.checkbox label:before,
+.checkbox input[type="checkbox"]:checked ~ label:before,
+.user > a,
+.uk-input:focus, .uk-select:focus, .uk-textarea:focus,
+.post-new .c-form input:focus,
+.blog-post-meta > a.button:hover,
+.pix-filter > li > a.active,
+.pix-filter > li > a:hover,
+.card-poup-meta > ul > li.active,
+.security > ul > li.active,
+.add-currency:hover,
+.walt-balance > a
+{
+	border-color: #088dcd;	
+}
+.user-tabs .nav-tabs > li > a.active,
+.checkbox label:after,
+.light-bg .uk-tab > li a.active{
+	border-bottom-color: #088dcd;
+}
+.checkbox label:after{
+	border-left-color: #088dcd;
+}
+
+
+

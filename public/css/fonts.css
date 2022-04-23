@@ -1,0 +1,9 @@
+@font-face {
+    font-family: "Ocr";
+    src: url("../fonts/ocr-b-10-bt/ocr-b-10-bt.ttf") format("ttf");
+   }
+
+   @font-face {
+    font-family: "CustomFont";
+    src: url("../fonts/ocr-b-10-bt/ocr-b-10-bt.ttf");;
+    }

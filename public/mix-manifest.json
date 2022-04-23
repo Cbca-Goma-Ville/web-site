@@ -1,0 +1,18 @@
+{
+    "/css/print-styles.css": "/css/print-styles.css",
+    "/css/acte.marriage.css": "/css/acte.marriage.css",
+    "/css/birth.attestation.css": "/css/birth.attestation.css",
+    "/css/birth.act.css": "/css/birth.act.css",
+    "/css/attestation.deces.css": "/css/attestation.deces.css",
+    "/css/death.certificate.css": "/css/death.certificate.css",
+    "/css/inhumation.certificate.css": "/css/inhumation.certificate.css",
+    "/css/body.translation.authorization.css": "/css/body.translation.authorization.css",
+    "/css/identity.card.recto.css": "/css/identity.card.recto.css",
+    "/css/identity.card.verso.css": "/css/identity.card.verso.css",
+    "/css/attestation.vie.css": "/css/attestation.vie.css",
+    "/css/birth.certificate.css": "/css/birth.certificate.css",
+    "/css/wedding.attestation.css": "/css/wedding.attestation.css",
+    "/css/wedding.act.css": "/css/wedding.act.css",
+    "/css/residence.cert.css": "/css/residence.cert.css",
+    "/js/jquery.quickfit.js": "/js/jquery.quickfit.js"
+}

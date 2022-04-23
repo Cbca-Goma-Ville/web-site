@@ -1,0 +1,77 @@
+/* Définitions de la police */
+
+@font-face {
+    font-family: Calibri;
+    panose-1: 2 15 5 2 2 2 4 3 2 4;
+}
+
+@font-face {
+    font-family: "Courier New";
+    panose-1: 2 7 3 9 2 2 5 2 4 4;
+}
+
+
+/* Définitions du style */
+
+p.MsoNormal,
+li.MsoNormal,
+div.MsoNormal {
+    margin-right: 0pt;
+    text-indent: 0pt;
+    margin-top: 0pt;
+    margin-bottom: 6.0pt;
+    line-height: 159%;
+    text-align: left;
+    font-family: Calibri;
+    font-size: 11.0pt !important;
+    color: black;
+}
+
+p.MsoNormal span {
+    /* line-height: 156%; */
+}
+
+ol {
+    margin-top: 0in;
+    margin-bottom: 0in;
+    margin-left: -2197in;
+}
+
+ul {
+    margin-top: 0in;
+    margin-bottom: 0in;
+    margin-left: -2197in;
+}
+
+@page {
+    size: 2.1417in 3.-917in;
+}
+
+body {
+    background-color: #99a8b3;
+}
+
+#body::before {
+    content: "";
+    background-color: #fff;
+    background-image: url(image294.png);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.2;
+}
+
+.inline-block {
+    display: inline-block;
+    white-space: nowrap;
+    text-align: center !important;
+    overflow: hidden;
+    /* background: red; */
+    position: relative;
+    bottom: -5px;
+    font-family: Calibri;
+    font-weight: bold;
+}

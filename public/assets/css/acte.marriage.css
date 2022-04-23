@@ -1,0 +1,180 @@
+body {
+    font-family: Arial;
+}
+
+.page-border {
+    padding: 5px;
+    /* border-radius: 5px; */
+}
+
+#header {
+    display: flex;
+}
+
+#header img {
+    height: 50px;
+}
+
+#header .left,
+#header .right {
+    width: 20%;
+}
+
+#header .left h5 {
+    margin: 5px 0;
+    font-size: 11px;
+}
+
+#header .center {
+    width: 60%;
+    text-align: center;
+}
+
+#header .center hr {
+    width: 55%;
+}
+
+#header .right .w-50 {
+    padding: 5px;
+    border: 2px solid #000;
+    border-radius: 10px;
+    text-align: center;
+    width: 70px !important;
+    margin: 0;
+    margin-top: 10px;
+}
+
+#header .right .w-50:first-of-type {
+    border-right: 0 !important;
+}
+
+#header .right .w-50:last-child {
+    /* border-left: 0 !important; */
+    margin-left: -7px;
+    margin-right: 10px;
+}
+
+#header .right .w-50 img {
+    height: 80px;
+    width: auto;
+}
+
+#header h5,
+#header .left .w-50 {
+    white-space: nowrap;
+}
+
+#header span {
+    display: inline-block;
+    text-transform: uppercase;
+}
+
+#body {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-size: 15px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#body div span {
+    display: inline-block;
+    overflow: hidden;
+    /* width: 100%; */
+    font-weight: bold;
+    text-align: center !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    /* font-size: 12px; */
+    position: relative;
+    bottom: -5px;
+    text-transform: uppercase;
+    text-indent: 0 !important;
+}
+
+#body div {
+    white-space: nowrap;
+    line-height: 18px;
+    margin: 0;
+}
+
+#footer {
+    display: flex;
+    font-size: 12px;
+}
+
+#footer h5 {
+    margin: 0;
+    font-size: 14px;
+    font-style: italic;
+    font-weight: bold;
+}
+
+#footer .center {
+    width: 50%;
+}
+
+#footer .left {
+    width: 30%;
+}
+
+#footer .right {
+    width: 20%;
+}
+
+#footer p {
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+#footer span {
+    overflow: hidden;
+    font-weight: bold;
+}
+
+.w-50 {
+    width: 49%;
+    display: inline-block;
+}
+
+.no-mb {
+    margin-bottom: 0 !important;
+}
+
+#watermark {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    overflow: hidden;
+    margin-left: 20%;
+    margin: 0;
+}
+
+#watermark p {
+    position: absolute;
+    top: 35%;
+    left: 0;
+    color: rgb(63, 111, 201);
+    font-size: 100px;
+    opacity: 0.3;
+    pointer-events: none;
+    -webkit-transform: rotate(-25deg);
+    -moz-transform: rotate(-45deg);
+    font-family: Arial, Helvetica, sans-serif;
+    z-index: -10;
+}
+
+@media print {
+    body * {
+        visibility: hidden;
+    }
+    #section-to-print,
+    #section-to-print * {
+        visibility: visible;
+    }
+    #section-to-print {
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+}

@@ -1,0 +1,35 @@
+#switcher { left: 0; padding: 8px 0; position: fixed; top: 220px; z-index: 3000; }
+.styleswitcher h4{color:#333; font-size:12px; font-weight:bold; text-transform:uppercase; margin:10px 0 10px 6px;}
+.styleswitcher .arrow-box { top:20px; right:-40px; position: absolute; }
+.switch-button { background:#fff;cursor:pointer; display: block; box-shadow:2px 1px 5px rgba(0, 0, 0, 0.1); -webkit-box-shadow:2px 1px 5px rgba(0, 0, 0, 0.1); -moz-box-shadow:2px 1px 5px rgba(0, 0, 0, 0.1); -o-box-shadow:2px 1px 5px rgba(0, 0, 0, 0.1); width:40px; height:40px; line-height:40px;text-align:center;font-size:21px; color:#333;} 
+.styleswitcher { position: fixed; top: 150px; left: 0; width: auto; background:#FFF; padding:20px 10px 12px 10px; width:202px; z-index:3000; box-shadow:0px 10px 25px rgba(0, 0, 0, 0.3); -webkit-box-shadow:0px 10px 25px rgba(0, 0, 0, 0.3); -moz-box-shadow:0px 10px 25px rgba(0, 0, 0, 0.3); -o-box-shadow:0px 10px 25px rgba(0, 0, 0, 0.3);}
+.styleswitcher p { margin:0; }
+.styleswitcher small{font-size:9px; margin-left:6px;}
+.styleswitcher ul { margin: 0 auto; padding: 0; width:100%; }
+ul.background-selector img:hover, ul.background-selector1 img:hover{ cursor: pointer; }
+.styleswitcher ul li { list-style: none; margin:0 4px 10px 8px; display:inline-block;}
+.styleswitcher ul li a { float: left; width: 16px; height: 14px; opacity: 0.7; text-decoration:none; filter: alpha(opacity=70); border:1px solid #999; }
+.styleswitcher ul li a:hover { opacity: 1; filter: alpha(opacity=100); }
+.styleswitcher ul li.nomargin { margin-bottom:2px; }
+ul.background-selector img { height:20px; width:20px; border:1px solid #999; }
+ul.background-selector1 li{margin-bottom:2px;}
+ul.background-selector1 img { height:20px; width:20px; border:1px solid #999; }
+ul.color-scheme li a:hover { opacity: 1; filter: alpha(opacity=100); }
+
+ul.color-scheme li a{width:21px; height:21px;}
+ul.color-scheme li a:hover { opacity: 1; filter: alpha(opacity=100); }
+ul.color-scheme li a.color1 { background: #007F7B; }
+ul.color-scheme li a.color2 { background: #C71B1B; }
+ul.color-scheme li a.color3 { background: #E27A3F; }
+ul.color-scheme li a.color4 { background: #779324; }
+ul.color-scheme li a.color5 { background: #725054; }
+ul.color-scheme li a.color6 { background: #409DAE; }
+ul.color-scheme li a.color7 { background: #0CC9E8; }
+ul.color-scheme li a.color8 { background: #C1C923; }
+ul.color-scheme li a.color9 { background: #DEA154; }
+ul.color-scheme li a.color10 { background: #8FB98B; }
+.styleswitcher ul.layouts{margin-bottom:10px;}
+ul.layouts li{ margin-right:10px;}
+ul.layouts li a{border:0; width:auto; height:auto;padding:1px 15px; border:1px solid #999; color:#666666;}
+ul.layouts li a:hover{text-decoration:none;}
+ul.layouts li.active a{border-width:2px; padding:0 14px;}

@@ -1,0 +1,94 @@
+html,body{
+    background-color: #99a8b3;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0px !important;
+    height: 50px;
+}
+
+.card{
+    /* border-radius: 10px 10px 10px 10px; */
+    /* background-color: rgb(83, 121, 190); */
+    /* background-image: url('./../bg.png'); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* width: 669px; */
+    /* height: 433px; */
+    /* margin-left: 67px; */
+    position: absolute;
+    width: 382px;
+    height: 242px;
+}
+
+@page {
+    size: 5.6in 3.43in;
+}
+
+.main-title{
+    text-align: center;
+}
+
+.body-content{
+    margin-top: 30px;
+    display: flex;
+}
+
+.card .corps .body-content .left img{
+    width: 80px;
+    height: auto;
+
+}
+
+.left{
+    width: 30%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+} 
+
+.right{
+    width: 70%;
+    display: block;
+}
+
+table{
+    background-color: white;
+    margin-top: -15px;
+    width: 227px;
+    height: 15px;
+    border: 2px solid #000;
+}
+
+td{
+    width: 38.8px;
+}
+
+.column{
+    border-right: 1px solid #000; 
+    font-size: 12px;
+    font-weight: bold;
+    padding: 2px 3px;
+}
+
+table .column:last-child {
+    border: unset;
+}
+
+h5 {
+    font-size: 10px;
+}
+
+.citizen-data {
+    margin-top: 10px;
+}
+
+.citizen-data .data {
+    margin-bottom: 3px;
+    font-size: 9px;
+}
+
+.citizen-data .data b {
+    display: block;
+}
