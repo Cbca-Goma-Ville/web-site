@@ -129,15 +129,9 @@
             </div>
 
             <ul>
-
-              <li><a href="">Faith</a> (10)</li>
-
-              <li><a href="#">Missions</a> (12)</li>
-
-              <li><a href="#">Salvation</a> (34)</li>
-
-              <li><a href="#">Worship</a> (14)</li>
-
+              @foreach ($services as $item)
+              <li><a href="{{ route('sermons_by', ['id'=> $item['id']]) }}">{{ $item['service_name'] }}</a> ({{ count($item['sermons']) }})</li>
+              @endforeach
             </ul>
 
           </div>

@@ -96,8 +96,18 @@ Route::get('/sermons', function (Request $request) {
     if ($response->successful()) {
         $preachers = $response['data'];
     }
-    // dd($response->json());
-    return view('sermons', ['sermons' => $sermons, 'preachers' => $preachers, 'pagination' => $pagination]);
+    
+    $url = config('app.api_path') . 'services/all';
+    $services = [];
+    $response = Http::timeout(200)
+        ->withHeaders(['X-Requested-With' => 'XMLHttpRequest'])
+        ->get($url);
+   
+    if ($response->successful()) {
+        $services = $response['data'];
+    }
+    
+    return view('sermons', ['sermons' => $sermons, 'preachers' => $preachers, 'pagination' => $pagination, 'services' => $services]);
 })->name('sermons');
 
 
