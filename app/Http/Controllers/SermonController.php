@@ -45,6 +45,7 @@ class SermonController extends Controller
     public function sermons_by(Request $request,$id){
         $url = config('app.api_path') . 'preachers/preacher/'.$id;
         $preachers_url = config('app.api_path') . 'preachers/all';
+        $services_url = config('app.api_path') . 'services/all';
 
         $response = Http::timeout(200)
             ->withHeaders(['X-Requested-With' => 'XMLHttpRequest'])
@@ -53,8 +54,12 @@ class SermonController extends Controller
         $preachers_response = Http::timeout(200)
         ->withHeaders(['X-Requested-With' => 'XMLHttpRequest'])
         ->get($preachers_url);
-
         $preachers = $preachers_response['data'];
+
+        $services_response = Http::timeout(200)
+        ->withHeaders(['X-Requested-With' => 'XMLHttpRequest'])
+        ->get($services_url);
+        $services = $services_response['data'];
 
         if ($response->successful()){
             $sermons = $response['sermons'];
@@ -63,7 +68,7 @@ class SermonController extends Controller
             $sermons = [];
         }
 
-        return view('sermons_by', ['sermons'=> $sermons,'author'=>$author, 'preachers'=>$preachers]);
+        return view('sermons_by', ['sermons'=> $sermons,'author'=>$author, 'preachers'=>$preachers, 'services'=>$services]);
     }
 
     public function services(Request $request,$id){

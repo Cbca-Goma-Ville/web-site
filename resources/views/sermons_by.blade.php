@@ -17,7 +17,7 @@
       </div>
     </div>
   </div>
-  <!-- End Nav Backed Header --> 
+  <!-- End Nav Backed Header -->
   <!-- Start Page Header -->
   <div class="page-header">
     <div class="container">
@@ -29,7 +29,7 @@
     </div>
   </div>
 
-  <!-- End Page Header --> 
+  <!-- End Page Header -->
 
   <!-- Start Content -->
 
@@ -41,13 +41,13 @@
 
         <div class="row">
 
-          <div class="col-md-8 sermon-archive"> 
+          <div class="col-md-8 sermon-archive">
 
             <!-- Sermons Listing -->
 
             @if(count($sermons) != 0)
                   @foreach ($sermons as $sermon)
-              
+
                   <article class="post sermon">
 
                     <header class="post-title">
@@ -106,7 +106,7 @@
 
                   </ul> -->
 
-            @else 
+            @else
             <p>Aucune Predications enregistrées actuellement</p>
             @endif
 
@@ -115,27 +115,15 @@
           <!-- Start Sidebar -->
 
           <div class="col-md-4 sidebar">
-
             <div class="widget sidebar-widget">
-
-              <div class="sidebar-widget-title">
-
-                <h3>Sermon Categories</h3>
-
-              </div>
-
-              <ul>
-
-                <li><a href="">Faith</a> (10)</li>
-
-                <li><a href="#">Missions</a> (12)</li>
-
-                <li><a href="#">Salvation</a> (34)</li>
-
-                <li><a href="#">Worship</a> (14)</li>
-
-              </ul>
-
+                <div class="sidebar-widget-title">
+                    <h3>Services & Series</h3>
+                </div>
+                <ul>
+                @foreach ($services as $item)
+                <li><a href="{{ route('services', ['id'=> $item['id']]) }}">{{ $item['service_name'] }}</a> ({{ count($item['sermons']) }})</li>
+                @endforeach
+                </ul>
             </div>
 
             <div class="widget sidebar-widget">
@@ -174,6 +162,6 @@
 
     </div>
 
-  </div>   
+  </div>
 
     @endsection

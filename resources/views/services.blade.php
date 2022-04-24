@@ -81,7 +81,7 @@
             <div class="widget sidebar-widget">
 
                 <div class="sidebar-widget-title">
-                    <h3>Services</h3>
+                    <h3>Services & Series</h3>
                 </div>
                 <ul>
                 @foreach ($services as $item)
