@@ -141,6 +141,8 @@ Route::get('/this-week', function () {
 
 Route::get('/sermons_by/{id}', [SermonController::class, 'sermons_by'])->name('sermons_by');
 
+Route::get('/services/{id}', [SermonController::class, 'services'])->name('services');
+
 Route::get('/sevent/{id}', [EventController::class, 'event'])->name('sevent');
 
 Route::get('/sermon/{id}', [SermonController::class, 'sermon'])->name('sermon');
@@ -148,6 +150,8 @@ Route::get('/sermon/{id}', [SermonController::class, 'sermon'])->name('sermon');
 Route::get('/sermon-albums', function () {
     return view('sermon-albums');
 })->name('sermon-albums');
+
+Route::get('/services/{id}', [SermonController::class, 'services'])->name('services');
 
 Route::prefix('admin')
     ->name('admin.')

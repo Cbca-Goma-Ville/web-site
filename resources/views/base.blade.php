@@ -177,6 +177,46 @@
 
                 <li><a href="{{ route('home') }}">{{ __('Accueil') }}</a></li>
 
+                <li class="megamenu"><a href="">Ministères</a>
+
+                  <ul class="dropdown">
+                    <li>
+                      <div class="megamenu-container container">
+                        <div class="row">
+                          <div class="col-md-3 hidden-sm hidden-xs"> <span class="megamenu-sub-title"><i class="fa fa-bell"></i> Prière du jour</span>
+                            <iframe width="200" height="150" src="https://player.vimeo.com/video/19564018?title=0&amp;byline=0&amp;color=007F7B"></iframe>
+                          </div>
+                          <div class="col-md-3"> <span class="megamenu-sub-title"><i class="fa fa-pagelines"></i> NOS MINISTERES</span>
+                            <ul class="sub-menu">
+                              <li><a href="">PASTORAL</a></li>
+                              <li><a href="">CONSISTOIRE</a></li>
+                              <li><a href="">MJC</a></li>
+                              <li><a href="">CHORALE</a></li>
+                              <li><a href="">EVANGELISATION</a></li>
+                            </ul>
+                          </div>
+                          <div class="col-md-3"> <span class="megamenu-sub-title"><i class="fa fa-clock-o"></i> EVENEMENTS AVENIR</span>
+                            <ul class="sub-menu">
+                              <li><a href="">Culte des mamans</a> <span class="meta-data">Mardi | 06:00 AM</span> </li>
+                              <li><a href="">Etudes Biblique</a> <span class="meta-data">Mercredi | 16:00 -18:00 PM</span> </li>
+                              <li><a href="">Réunion Staff</a> <span class="meta-data">Samedi| 16:00 PM</span> </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </li>
+                <li><a href="">Actualités</a></li>
+                <li><a href="{{ route('sermons') }}">Prédications</a></li>
+                <li><a href="{{ route('events-list') }}">Événements</a>
+
+                  <ul class="dropdown">
+                    <li><a href="{{ route('events-list') }}">Liste</a></li>
+                    <li><a href="{{ route('this-week') }}">Cette semaine</a></li>
+                  </ul>
+
+                </li>
                 <li><a href="{{ route('about') }}">{{ __('A propos') }}</a>
 
                   <ul class="dropdown">
@@ -190,83 +230,6 @@
                   </ul>
 
                 </li>
-
-                <li class="megamenu"><a href="">Ministères</a>
-
-                  <ul class="dropdown">
-
-                    <li>
-
-                      <div class="megamenu-container container">
-
-                        <div class="row">
-
-                          <div class="col-md-3 hidden-sm hidden-xs"> <span class="megamenu-sub-title"><i class="fa fa-bell"></i> Prière du jour</span>
-
-                            <iframe width="200" height="150" src="https://player.vimeo.com/video/19564018?title=0&amp;byline=0&amp;color=007F7B"></iframe>
-
-                          </div>
-
-                          <div class="col-md-3"> <span class="megamenu-sub-title"><i class="fa fa-pagelines"></i> NOS MINISTERES</span>
-
-                            <ul class="sub-menu">
-
-                              <li><a href="">PASTORAL</a></li>
-
-                              <li><a href="">CONSISTOIRE</a></li>
-
-                              <li><a href="">MJC</a></li>
-
-                              <li><a href="">CHORALE</a></li>
-
-                              <li><a href="">EVANGELISATION</a></li>
-
-                            </ul>
-
-                          </div>
-
-                          <div class="col-md-3"> <span class="megamenu-sub-title"><i class="fa fa-clock-o"></i> EVENEMENTS AVENIR</span>
-
-                            <ul class="sub-menu">
-
-                              <li><a href="">Culte des mamans</a> <span class="meta-data">Mardi | 06:00 AM</span> </li>
-
-                              <li><a href="">Etudes Biblique</a> <span class="meta-data">Mercredi | 16:00 -18:00 PM</span> </li>
-
-                              <li><a href="">Réunion Staff</a> <span class="meta-data">Samedi| 16:00 PM</span> </li>
-
-                            </ul>
-
-                          </div>
-
-                        </div>
-
-                      </div>
-
-                    </li>
-
-                  </ul>
-
-                </li>
-                 <li><a href="">Actualités</a>
-                  <li><a href="{{ route('sermons') }}">Prédications</a></li>
-
-
-                <li><a href="{{ route('events-list') }}">Événements</a>
-
-                  <ul class="dropdown">
-
-                    <li><a href="{{ route('events-list') }}">Liste</a></li>
-
-                </li>
-
-                    <li><a href="{{ route('this-week') }}">Cette semaine</a></li>
-
-                  </ul>
-
-                </li>
-
-              	</li>
 
               </ul>
 

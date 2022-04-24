@@ -77,7 +77,7 @@
 
                 <div class="col-md-9 col-sm-9">
 
-                  <h3><a href="{{ route('sermon', ['id'=> $sermon['id'],'title'=> $sermon['sermon_title']]) }}">{{ Str::substr($sermon['sermon_title'], 0, 35) }}...</a></h3>
+                  <h3><a href="{{ route('sermon', ['id'=> $sermon['id'],'title'=> $sermon['sermon_title']]) }}">{{ Str::substr($sermon['sermon_title'], 0, 55) }}...</a></h3>
 
                   <span class="meta-data"><i class="fa fa-calendar"></i>Publié le {{ $sermon['sermon_date'] }} | {{ __('Prédicateur')}} : <a href="{{ route('sermons_by', ['id'=> $sermon['author']['id']]) }}">{{ $sermon['author']['preacher_name'] }}</a></span>
                 </div>
@@ -113,24 +113,17 @@
           @else
           <p>Aucune Predications enregistrées actuellement</p>
           @endif
-
         </div>
-
         <!-- Start Sidebar -->
 
         <div class="col-md-4 sidebar">
-
           <div class="widget sidebar-widget">
-
             <div class="sidebar-widget-title">
-
               <h3>Services</h3>
-
             </div>
-
             <ul>
               @foreach ($services as $item)
-              <li><a href="{{ route('sermons_by', ['id'=> $item['id']]) }}">{{ $item['service_name'] }}</a> ({{ count($item['sermons']) }})</li>
+              <li><a href="{{ route('services', ['id'=> $item['id']]) }}">{{ $item['service_name'] }}</a> ({{ count($item['sermons']) }})</li>
               @endforeach
             </ul>
 
