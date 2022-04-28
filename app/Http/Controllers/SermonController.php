@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
+use Illuminate\Pagination\Paginator;
+use Illuminate\Support\Collection;
+use Illuminate\Pagination\LengthAwarePaginator;
 
 class SermonController extends Controller
 {
@@ -81,6 +84,13 @@ class SermonController extends Controller
         return view('sermons_by', ['sermons'=> $sermons,'author'=>$author, 'preachers'=>$preachers, 'services'=>$services]);
     }
 
+    public function paginate($items, $perPage = 5, $page = null, $options = [])
+    {
+        $page = $page ?: (Paginator::resolveCurrentPage() ?: 1);
+        $items = $items instanceof Collection ? $items : Collection::make($items);
+        return new LengthAwarePaginator($items->forPage($page, $perPage), $items->count(), $perPage, $page, ['path' => url()->current()]);
+    }
+
     public function services(Request $request,$id){
         $url = config('app.api_path') . 'services/service/'.$id;
         $services_url = config('app.api_path') . 'services/all';
@@ -112,7 +122,9 @@ class SermonController extends Controller
             $sermons = $services[1];
         }
 
-        return view('services', ['sermons'=> $sermons['sermons'],'author'=>$author,'preachers'=>$preachers, 'service'=>$service, 'services'=>$services]);
+        $sermons = $this->paginate($sermons['sermons']);
+
+        return view('services', ['sermons'=> $sermons,'author'=>$author,'preachers'=>$preachers, 'service'=>$service, 'services'=>$services]);
     }
 
 }

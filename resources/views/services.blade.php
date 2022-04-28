@@ -67,7 +67,7 @@
                     </div>
                   </article>
                   @endforeach
-
+                  {{ $sermons->links('pagination::default') }}
             @else
             <p>Aucune Predications enregistrées actuellement</p>
             @endif

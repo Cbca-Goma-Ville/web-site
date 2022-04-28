@@ -239,4 +239,5 @@ Route::prefix('home')
         })->name('services_list');
          // ---------- EVENTS ------------------- //
 
+
     });
