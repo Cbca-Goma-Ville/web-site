@@ -39,7 +39,17 @@ class SermonController extends Controller
             $comments = $response['data'];
         }
 
-        return view('sermon', ['sermon'=> $sermon, 'comments'=> $comments, 'preachers'=> $preachers]);
+        $url = config('app.api_path') . 'services/all';
+        $services = [];
+        $response = Http::timeout(200)
+            ->withHeaders(['X-Requested-With' => 'XMLHttpRequest'])
+            ->get($url);
+
+        if ($response->successful()) {
+            $services = $response['data'];
+        }
+
+        return view('sermon', ['sermon'=> $sermon, 'comments'=> $comments, 'preachers'=> $preachers, 'services'=>$services]);
     }
 
     public function sermons_by(Request $request,$id){

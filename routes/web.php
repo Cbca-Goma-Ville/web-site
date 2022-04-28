@@ -20,7 +20,7 @@ use Illuminate\Http\Request;
 */
 
 Route::get('/', function () {
-    //return view('coming-soon') last;
+
     $url = config('app.api_path') . 'sermons/last';
     $latest = [];
 
@@ -96,17 +96,17 @@ Route::get('/sermons', function (Request $request) {
     if ($response->successful()) {
         $preachers = $response['data'];
     }
-    
+
     $url = config('app.api_path') . 'services/all';
     $services = [];
     $response = Http::timeout(200)
         ->withHeaders(['X-Requested-With' => 'XMLHttpRequest'])
         ->get($url);
-   
+
     if ($response->successful()) {
         $services = $response['data'];
     }
-    
+
     return view('sermons', ['sermons' => $sermons, 'preachers' => $preachers, 'pagination' => $pagination, 'services' => $services]);
 })->name('sermons');
 
@@ -216,7 +216,7 @@ Route::prefix('home')
 
             return view('chronology', ['events' => $events]);
         })->name('events_list');
-    
+
         // ---------- EVENTS ------------------- //
 
         // ---------- SERVICES ----------------- //

@@ -122,14 +122,13 @@
           <div class="col-md-3 sidebar">
             <div class="widget sidebar-widget">
               <div class="sidebar-widget-title">
-                <h3>Sermon Categories</h3>
-              </div>
-              <ul>
-                <li><a href="#">Faith</a> (10)</li>
-                <li><a href="#">Missions</a> (12)</li>
-                <li><a href="#">Salvation</a> (34)</li>
-                <li><a href="#">Worship</a> (14)</li>
-              </ul>
+              <h3>Services & Series</h3>
+            </div>
+            <ul>
+              @foreach ($services as $item)
+              <li><a href="{{ route('services', ['id'=> $item['id']]) }}">{{ $item['service_name'] }}</a> ({{ count($item['sermons']) }})</li>
+              @endforeach
+            </ul>
             </div>
             <div class="widget sidebar-widget">
               <div class="sidebar-widget-title">
