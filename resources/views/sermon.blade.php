@@ -6,7 +6,7 @@
     @section('content')
 
     @php
-    
+
         $url = $sermon['sermon_video_url'];
         if($url != ""){
           $exploded = explode("=",$url);
@@ -14,7 +14,7 @@
         }else{
           $key = "";
         }
-        
+
     @endphp
         <!-- Start Nav Backed Header -->
   <div class="nav-backed-header parallax">
@@ -30,7 +30,7 @@
       </div>
     </div>
   </div>
-  <!-- End Nav Backed Header -->  
+  <!-- End Nav Backed Header -->
   <!-- Start Content -->
   <div class="main" role="main">
     <div id="content" class="content full">
@@ -47,7 +47,7 @@
                 <!-- Iframe baby -->
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/{{ $key }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 <!-- Iframe baby -->
-                @else 
+                @else
                 <div class="">
                   <audio class="audio-player" src="{{ asset('sermon/'.$sermon['sermon_audio_url'].'') }}" type="audio/mp3" controls></audio>
                 </div>
@@ -74,7 +74,7 @@
                   </div>
                 </li>
               </ol>
-              @else 
+              @else
               <ol class="comments">
                 <li>
                   <div class="post-comment-block">

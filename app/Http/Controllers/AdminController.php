@@ -22,11 +22,11 @@ class AdminController extends Controller
             'email' => 'required|email',
             'password' => 'required'
         ]);
-        
+
         $params = $request->only('email', 'password');
 
         $url = config('app.api_path') . 'login';
-        
+
         $response = Http::timeout(200)
             ->withHeaders(['X-Requested-With' => 'XMLHttpRequest'])
             ->post($url, $params);
@@ -65,7 +65,7 @@ class AdminController extends Controller
         return back()
             ->with('status', 'Email ou mot de passe invalide')
             ->withInput();
-    
+
     }
 
     public function logout(Request $request)
@@ -87,13 +87,13 @@ class AdminController extends Controller
         $request->session()->regenerateToken();
 
         return redirect(route('admin.login'));
-      
+
     }
 
     public function dashboard(Request $request){
 
         $url = config('app.api_path') . 'sermons/all';
-        
+
             $response = Http::timeout(200)
                 ->withHeaders(['X-Requested-With' => 'XMLHttpRequest'])
                 ->get($url);
@@ -107,15 +107,20 @@ class AdminController extends Controller
     public function add_sermon(Request $request){
 
         $url = config('app.api_path') . 'preachers/all';
-        
+        $url_services = config('app.api_path') . 'services/all';
+
         $response = Http::timeout(200)
             ->withHeaders(['X-Requested-With' => 'XMLHttpRequest'])
             ->get($url);
 
-        if ($response->successful()) {
-            $preachers = $response['data'];
-        }
-        return view('home/add_sermon',['preachers' => $preachers]);
+        $response1 = Http::timeout(200)
+            ->withHeaders(['X-Requested-With' => 'XMLHttpRequest'])
+            ->get($url_services);
+
+        $preachers = $response['data'];
+        $services = $response1['data'];
+
+        return view('home/add_sermon',['preachers' => $preachers, 'services'=> $services]);
     }
 
     public function add_sermon_validation(Request $request){
@@ -123,10 +128,10 @@ class AdminController extends Controller
         //Validation
 
         //Validation
-        if($request->hasFile('audio_file') 
+        if($request->hasFile('audio_file')
             && $request->hasFile('pdf_file')
             && $request->hasFile('sermon_cover')){
-    
+
         $audio_file = $request->file('audio_file');
         $pdf_file = $request->file('pdf_file');
         $sermon_cover = $request->file('sermon_cover');
@@ -148,37 +153,36 @@ class AdminController extends Controller
         }
 
         $params = $request->all();
-        
+
         $params["sermon_audio_url"] = "audios/".$audio_new_name;
         $params["sermon_file_url"] = "pdf/".$pdf_new_name;
         $params["sermon_cover"] = "covers/".$sermon_cover_new_name;
 
         $url = config('app.api_path') . 'sermons/add';
-        
+
         $response = Http::timeout(200)
             ->withHeaders(['X-Requested-With' => 'XMLHttpRequest'])
             ->post($url, $params);
-            
+
         if ($response->successful()) {
 
             $url = config('app.api_path') . 'sermons/all';
-        
+
             $response = Http::timeout(200)
                 ->withHeaders(['X-Requested-With' => 'XMLHttpRequest'])
                 ->get($url);
 
-                $sermons = $response['data'];
+            $sermons = $response['data'];
 
             return redirect(route('home.dashboard'));
-
         }
-       
+
     }
 
     public function preachers_list(Request $request){
 
         $url = config('app.api_path') . 'preachers/all';
-        
+
             $response = Http::timeout(200)
                 ->withHeaders(['X-Requested-With' => 'XMLHttpRequest'])
                 ->get($url);
@@ -201,7 +205,7 @@ class AdminController extends Controller
         //Validation
         if($request->hasFile('preacher_image')){
             $preacher_image = $request->file('preacher_image');
-    
+
             $picture_new_name = time().'CBCA_GV_SERMONS_COVER.'.$preacher_image->getClientOriginalExtension();
 
             $image_dest = public_path('/preachers');
@@ -219,7 +223,7 @@ class AdminController extends Controller
         }
 
         $url = config('app.api_path') . 'preachers/add';
-        
+
         $response = Http::timeout(200)
             ->withHeaders(['X-Requested-With' => 'XMLHttpRequest'])
             ->post($url, $params);
@@ -227,7 +231,7 @@ class AdminController extends Controller
         if ($response->successful()) {
 
             $url = config('app.api_path') . 'preachers/all';
-        
+
             $response = Http::timeout(200)
                 ->withHeaders(['X-Requested-With' => 'XMLHttpRequest'])
                 ->get($url);
@@ -237,7 +241,7 @@ class AdminController extends Controller
             return redirect(route('home.preachers_list'));
 
         }
-       
+
     }
 
     public function add_staff(Request $request){
@@ -251,7 +255,7 @@ class AdminController extends Controller
         //Validation
         if($request->hasFile('staff_image')){
             $staff_image = $request->file('staff_image');
-    
+
             $picture_new_name = time().'CBCA_GV_STAFF.'.$staff_image->getClientOriginalExtension();
 
             $image_dest = public_path('/staff');
@@ -269,7 +273,7 @@ class AdminController extends Controller
         }
 
         $url = config('app.api_path') . 'staff/add';
-        
+
         $response = Http::timeout(200)
             ->withHeaders(['X-Requested-With' => 'XMLHttpRequest'])
             ->post($url, $params);
@@ -277,7 +281,7 @@ class AdminController extends Controller
         if ($response->successful()) {
 
             $url = config('app.api_path') . 'staff/all';
-        
+
             $response = Http::timeout(200)
                 ->withHeaders(['X-Requested-With' => 'XMLHttpRequest'])
                 ->get($url);
@@ -291,7 +295,7 @@ class AdminController extends Controller
 
     public function staff_list(Request $request){
         $url = config('app.api_path') . 'staff/all';
-        
+
         $response = Http::timeout(200)
             ->withHeaders(['X-Requested-With' => 'XMLHttpRequest'])
             ->get($url);
@@ -299,7 +303,7 @@ class AdminController extends Controller
             $staff = $response['data'];
         }
 
-        return view('home/staff_list',['staff' => $staff]);   
+        return view('home/staff_list',['staff' => $staff]);
     }
 
     public function add_event(Request $request){
@@ -313,7 +317,7 @@ class AdminController extends Controller
 
         if($request->hasFile('event_cover')){
             $event_image = $request->file('event_cover');
-    
+
             $picture_new_name = time().'CBCA_GV_EVENT_COVER.'.$event_image->getClientOriginalExtension();
 
             $image_dest = public_path('sevent/events');
@@ -325,7 +329,7 @@ class AdminController extends Controller
         $params["event_cover"] = "events/".$picture_new_name;
 
         $url = config('app.api_path') . 'events/add';
-        
+
         $response = Http::timeout(200)
             ->withHeaders(['X-Requested-With' => 'XMLHttpRequest'])
             ->post($url, $params);
@@ -333,7 +337,7 @@ class AdminController extends Controller
         if ($response->successful()) {
 
             $url = config('app.api_path') . 'events/all';
-        
+
             $response = Http::timeout(200)
                 ->withHeaders(['X-Requested-With' => 'XMLHttpRequest'])
                 ->get($url);
@@ -348,7 +352,7 @@ class AdminController extends Controller
 
     public function events_list(Request $request){
         $url = config('app.api_path') . 'events/all';
-        
+
         $response = Http::timeout(200)
             ->withHeaders(['X-Requested-With' => 'XMLHttpRequest'])
             ->get($url);
@@ -356,7 +360,7 @@ class AdminController extends Controller
             $events = $response['data'];
         }
 
-        return view('home/events_list',['events' => $events]);   
+        return view('home/events_list',['events' => $events]);
     }
 
     public function add_services(Request $request){
@@ -369,7 +373,7 @@ class AdminController extends Controller
         //Validation
         if($request->hasFile('service_image')){
             $service_image = $request->file('service_image');
-    
+
             $picture_new_name = time().'CBCA_GV_SERVICES.'.$service_image->getClientOriginalExtension();
 
             $image_dest = public_path('/services');
@@ -387,15 +391,15 @@ class AdminController extends Controller
         }
 
         $url = config('app.api_path') . 'services/add';
-        
+
         $response = Http::timeout(200)
             ->withHeaders(['X-Requested-With' => 'XMLHttpRequest'])
             ->post($url, $params);
-        
+
         if ($response->successful()) {
 
             $url = config('app.api_path') . 'services/all';
-        
+
             $response = Http::timeout(200)
                 ->withHeaders(['X-Requested-With' => 'XMLHttpRequest'])
                 ->get($url);
@@ -409,7 +413,7 @@ class AdminController extends Controller
 
     public function services_list(Request $request){
         $url = config('app.api_path') . 'services/all';
-        
+
         $response = Http::timeout(200)
             ->withHeaders(['X-Requested-With' => 'XMLHttpRequest'])
             ->get($url);
@@ -417,7 +421,7 @@ class AdminController extends Controller
             $services = $response['data'];
         }
 
-        return view('home/services_list',['services' => $services]);   
+        return view('home/services_list',['services' => $services]);
     }
 
 }

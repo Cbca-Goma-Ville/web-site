@@ -3,10 +3,8 @@
 
 <div class="content-page">
                 <div class="content">
-
                     <!-- Start Content-->
                     <div class="container-fluid">
-                        
                         <!-- start page title -->
                         <div class="row">
                             <div class="col-12">
@@ -21,8 +19,8 @@
                                     <h4 class="page-title">Ajouter une prédication</h4>
                                 </div>
                             </div>
-                        </div>     
-                        <!-- end page title --> 
+                        </div>
+                        <!-- end page title -->
 
                         <div class="row">
                             <div class="col-12">
@@ -48,29 +46,24 @@
 
                                                 <div>
                                                     <label for="project-overview" class="form-label">Predicateur</label>
-                                                    
+
                                                     <select class="form-control" data-toggle="select2" data-width="100%" name="author_id" required>
                                                         <option>Select</option>
                                                         @foreach ($preachers as $item)
-                                                        <option value="{{ $item['id'] }}">{{ $item['preacher_name'] }}</option>  
+                                                        <option value="{{ $item['id'] }}">{{ $item['preacher_name'] }}</option>
                                                         @endforeach
                                                     </select>
                                                 </div>
 
-                                                <div class="mb-3">
-                                                    <label class="form-label">Etat</label> <br/>
-                                                    <div class="form-check form-check-inline">
-                                                        <input type="radio" id="customRadio1" name="customRadio" class="form-check-input">
-                                                        <label class="form-check-label" for="customRadio1">Brouillon</label>
-                                                    </div>
-                                                    <div class="form-check form-check-inline">
-                                                        <input type="radio" id="customRadio2" name="customRadio" class="form-check-input">
-                                                        <label class="form-check-label" for="customRadio2">Publié</label>
-                                                    </div>
-                                                    <div class="form-check form-check-inline">
-                                                        <input type="radio" id="customRadio3" name="customRadio" class="form-check-input" checked>
-                                                        <label class="form-check-label" for="customRadio3">Public</label>
-                                                    </div>
+                                                <div>
+                                                    <label for="project-overview" class="form-label">Services & series</label>
+
+                                                    <select class="form-control" data-toggle="select2" data-width="100%" name="service_id" required>
+                                                        <option>Select</option>
+                                                        @foreach ($services as $item)
+                                                        <option value="{{ $item['id'] }}">{{ $item['service_name'] }}</option>
+                                                        @endforeach
+                                                    </select>
                                                 </div>
 
                                             </div> <!-- end col-->
@@ -126,7 +119,7 @@
                             </div> <!-- end col-->
                         </div>
                         <!-- end row-->
-                        
+
                     </div> <!-- container -->
 
                 </div> <!-- content -->
@@ -136,7 +129,7 @@
                     <div class="container-fluid">
                         <div class="row">
                             <div class="col-md-6">
-                                <script>document.write(new Date().getFullYear())</script> &copy; by <a href="#">Media Team</a> 
+                                <script>document.write(new Date().getFullYear())</script> &copy; by <a href="#">Media Team</a>
                             </div>
                             <div class="col-md-6">
                                 <div class="text-md-end footer-links d-none d-sm-block">
