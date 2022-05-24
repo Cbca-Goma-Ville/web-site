@@ -151,6 +151,10 @@ Route::get('/sermon-albums', function () {
     return view('sermon-albums');
 })->name('sermon-albums');
 
+Route::get('/actus', function () {
+    return view('actus');
+})->name('actus');
+
 Route::get('/services/{id}', [SermonController::class, 'services'])->name('services');
 
 Route::prefix('admin')

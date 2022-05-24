@@ -2,17 +2,17 @@
 
     @section('title','Notre Staff | '.config('app.name'))
     @section('content')
-        <!-- Start Page Header -->
+  <!-- Start Page Header -->
   <div class="page-header">
     <div class="container">
       <div class="row">
         <div class="col-md-12">
-          <h1>Our Staff</h1>
+          <h1>Notre Staff</h1>
         </div>
       </div>
     </div>
   </div>
-  <!-- End Page Header --> 
+  <!-- End Page Header -->
   <!-- Start Content -->
   <div class="main" role="main">
     <div id="content" class="content full">
@@ -33,11 +33,11 @@
             </div>
           </div>
           @endforeach
-          @else 
+          @else
           <p class="text-center">Aucun staff enregistré pour le moment...</p>
           @endif
-         
-      
+
+
         </div>
       </div>
     </div>
