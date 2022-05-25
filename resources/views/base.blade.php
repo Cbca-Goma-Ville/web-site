@@ -98,7 +98,7 @@
 
   #days{
     background-color: #eceae4;
-    color: #666666; 
+    color: #666666;
   }
 
   .text-primary, .btn-primary .badge, .btn-link, a.list-group-item.active > .badge, .nav-pills > .active > a > .badge, p.drop-caps:first-child:first-letter, .accent-color, .events-listing .event-detail h4 a, .featured-sermon h4 a, .page-header h1, .post-more, ul.nav-list-primary > li a:hover, .widget_recent_comments a, .navigation .megamenu-container .megamenu-sub-title, .cause-item .progress-label, .payment-to-cause a, .products-list li .product-price, .products-list li .product-details h3 a:hover{
@@ -125,7 +125,7 @@
 
 <body>
 
-<div class="body"> 
+<div class="body">
 
   <!-- Start Site Header -->
 
@@ -207,7 +207,7 @@
                     </li>
                   </ul>
                 </li>
-                <li><a href="">Actualités</a></li>
+                <li><a href="{{ route('actus') }}">Actualités</a></li>
                 <li><a href="{{ route('sermons') }}">Prédications</a></li>
                 <li><a href="{{ route('events-list') }}">Événements</a>
 
@@ -245,9 +245,9 @@
 
   </header>
 
-  <!-- End Site Header --> 
+  <!-- End Site Header -->
 
-  
+
 
   @yield('content')
 
@@ -259,7 +259,7 @@
 
     <div class="container">
 
-      <div class="row"> 
+      <div class="row">
 
         <!-- Start Footer Widgets -->
 
@@ -335,35 +335,35 @@
 
   </footer>
 
-  <!-- End Footer --> 
+  <!-- End Footer -->
 
-  <a id="back-to-top"><i class="fa fa-angle-double-up"></i></a> 
+  <a id="back-to-top"><i class="fa fa-angle-double-up"></i></a>
 
 </div>
 
-<script src="{{ asset('js/jquery-2.0.0.min.js') }}"></script> <!-- Jquery Library Call --> 
+<script src="{{ asset('js/jquery-2.0.0.min.js') }}"></script> <!-- Jquery Library Call -->
 
-<script src="{{ asset('plugins/prettyphoto/js/prettyphoto.js') }}"></script> <!-- PrettyPhoto Plugin --> 
+<script src="{{ asset('plugins/prettyphoto/js/prettyphoto.js') }}"></script> <!-- PrettyPhoto Plugin -->
 
-<script src="{{ asset('js/helper-plugins.js') }}"></script> <!-- Plugins --> 
+<script src="{{ asset('js/helper-plugins.js') }}"></script> <!-- Plugins -->
 
-<script src="{{ asset('js/bootstrap.js') }}"></script> <!-- UI --> 
+<script src="{{ asset('js/bootstrap.js') }}"></script> <!-- UI -->
 
-<script src="{{ asset('js/waypoints.js') }}"></script> <!-- Waypoints --> 
+<script src="{{ asset('js/waypoints.js') }}"></script> <!-- Waypoints -->
 
-<script src="{{ asset('plugins/mediaelement/mediaelement-and-player.min.js') }}"></script> <!-- MediaElements --> 
+<script src="{{ asset('plugins/mediaelement/mediaelement-and-player.min.js') }}"></script> <!-- MediaElements -->
 
 <script src="{{ asset('plugins/nivoslider/jquery.nivo.slider.js') }}"></script> <!-- NivoSlider -->
 
-<script src="{{ asset('js/init.js') }}"></script> <!-- All Scripts --> 
+<script src="{{ asset('js/init.js') }}"></script> <!-- All Scripts -->
 
-<script src="{{ asset('plugins/flexslider/js/jquery.flexslider.js') }}"></script> <!-- FlexSlider --> 
+<script src="{{ asset('plugins/flexslider/js/jquery.flexslider.js') }}"></script> <!-- FlexSlider -->
 
-<script src="{{ asset('plugins/countdown/js/jquery.countdown.min.js') }}"></script> <!-- Jquery Timer --> 
+<script src="{{ asset('plugins/countdown/js/jquery.countdown.min.js') }}"></script> <!-- Jquery Timer -->
 
-<script src="{{ asset('style-switcher/js/jquery_cookie.js') }}"></script> 
+<script src="{{ asset('style-switcher/js/jquery_cookie.js') }}"></script>
 
-<script src="{{ asset('style-switcher/js/script.js') }}"></script> 
+<script src="{{ asset('style-switcher/js/script.js') }}"></script>
 
 </body>
 
