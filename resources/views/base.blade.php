@@ -147,7 +147,7 @@
 
             <ul class="top-navigation hidden-sm hidden-xs">
 
-              <li><a href="https://web.facebook.com/cbcagomaville/?_rdc=1&_rdr" target="_blank">Suivre en Direct</a></li>
+              <li><a href="https://cbcagomaville.online.church/">Suivre en Direct</a></li>
 
               <li><a href="">Programme</a></li>
 
