@@ -1,5 +1,6 @@
 @extends('base')
     @section('title', 'Predications - '.$service['service_name'].' | '.config('app.name'))
+    @section('sermon_img', asset($service['service_image']))
     @section('content')
 
         <!-- Start Nav Backed Header -->

@@ -120,6 +120,12 @@ class SermonController extends Controller
             $sermons = $services[0];
         }elseif($service['id'] == 2){
             $sermons = $services[1];
+        }elseif($service['id'] == 3){
+            $sermons = $services[2];
+        }elseif($service['id'] == 4){
+            $sermons = $services[3];
+        }elseif($service['id'] == 5){
+            $sermons = $services[4];
         }
 
         $sermons = $this->paginate($sermons['sermons']);
