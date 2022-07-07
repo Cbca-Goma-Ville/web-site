@@ -124,9 +124,6 @@ class AdminController extends Controller
     }
 
     public function add_sermon_validation(Request $request){
-
-        //Validation
-
         //Validation
         if($request->hasFile('audio_file')
             && $request->hasFile('pdf_file')

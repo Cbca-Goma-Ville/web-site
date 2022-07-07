@@ -217,96 +217,55 @@
                   </ul>
 
                 </li>
+                <li><a href="{{ route('albums') }}">{{ __('Gallerie') }}</a></li>
                 <li><a href="{{ route('about') }}">{{ __('A propos') }}</a>
-
                   <ul class="dropdown">
-
                     <li><a href="{{ route('about') }}">{{ __('Aperçu') }}</a></li>
-
                     <li><a href="{{ route('location') }}">{{ __('Où nous nous rencontrons') }}</a></li>
-
                     <li><a href="{{ route('our-staff') }}">{{ __('Notre Staff') }}</a></li>
-
                   </ul>
-
                 </li>
-
               </ul>
-
             </nav>
-
           </div>
-
         </div>
-
       </div>
-
     </div>
-
   </header>
 
   <!-- End Site Header -->
 
-
-
   @yield('content')
-
-
 
   <!-- Start Footer -->
 
   <footer class="site-footer">
-
     <div class="container">
-
       <div class="row">
-
         <!-- Start Footer Widgets -->
-
         <div class="col-md-4 col-sm-4 widget footer-widget">
-
           <h4 class="footer-widget-title">Apropos de nous</h4>
-
           <img src="{{ asset('images/logo.png') }}" alt="CBCA GomaVille">
-
           <div class="spacer-20"></div>
-
           <p>CBCA Goma Ville est l’une de 414 paroisses de la Communauté Baptiste au Centre de l’Afrique. Elle est une paroisse bilingue; francophone et anglophone. Une église en bonne santé pour la transformation de la société.</p>
-
         </div>
-
         <div class="col-md-4 col-sm-4 widget footer-widget">
-
           <h4 class="footer-widget-title">Raccourcis</h4>
-
           <ul>
-
             <li><a href="{{ route('home') }}">Accueil</a></li>
-
             <li><a href="{{ route('about') }}">Apropos</a></li>
-
             <li><a href="{{ route('events-list') }}">Evenements</a></li>
-
             <li><a href="{{ route('sermons') }}">Prédications</a></li>
-
-            <li><a href="">Actualités</a></li>
-
+            <li><a href="{{ route('actus') }}">Actualités</a></li>
+            <li><a href="{{ route('albums') }}">Galerie</a></li>
           </ul>
-
         </div>
-
         <div class="col-md-4 col-sm-4 widget footer-widget">
-
           <h4 class="footer-widget-title">Retrouvez-nous sur Facebook, CBCA Goma-Ville</h4>
-
           <ul class="twitter-widget">
-
           </ul>
-
         </div>
-
       </div>
-
     </div>
 
   </footer>

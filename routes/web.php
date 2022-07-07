@@ -155,6 +155,20 @@ Route::get('/actus', function () {
     return view('actus');
 })->name('actus');
 
+Route::get('/albums', function () {
+
+    $url = config('app.api_path') . 'albums/all';
+
+    $response = Http::timeout(200)
+        ->withHeaders(['X-Requested-With' => 'XMLHttpRequest'])
+        ->get($url);
+    if ($response->successful()) {
+        $albums = $response['data'];
+    }
+
+    return view('albums', ['albums' => $albums]);
+})->name('albums');
+
 Route::get('/services/{id}', [SermonController::class, 'services'])->name('services');
 
 Route::prefix('admin')
