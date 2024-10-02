@@ -1,39 +1,46 @@
-CBCA Goma Ville - Church Information Website
+# CBCA Goma Ville - Church Information Website
+
 This is the official website for CBCA Goma Ville, a Laravel project that consumes an external API to load church information. This guide will help you set up and run the project locally.
 
-Get Started
-Requirements
+## Get Started
+
+### Requirements
+
 Before getting started, ensure you have the following installed on your machine:
 
-PHP (version 8.0 or higher recommended)
-Composer (dependency manager for PHP)
-Laravel (version 8.x or higher)
-Installation
+- **PHP** (version 8.0 or higher recommended)
+- **Composer** (dependency manager for PHP)
+- **Laravel** (version 8.x or higher)
+
+### Installation
+
 Clone the repository:
 
-bash
-Copy code
+```bash
 git clone https://github.com/Cbca-Goma-Ville/web-site.git
+```
+
 Navigate to the project directory:
 
-bash
-Copy code
+```bash
 cd web-site
+```
 Install dependencies: Using Composer, install the necessary dependencies:
 
-bash
-Copy code
+```bash
 composer install
+```
+
 Copy the .env.example to create your .env file:
 
-bash
-Copy code
+```bash
 cp .env.example .env
+```
 Generate the application key: This will set the application key in your .env file.
 
-bash
-Copy code
+```bash
 php artisan key:generate
+```
 Set up your environment variables: In your .env file, make sure to configure the following:
 
 Database connection settings
@@ -47,9 +54,9 @@ php artisan migrate
 Running the Project
 To start the local development server, run the following command:
 
-bash
-Copy code
+```bash
 php artisan serve
+```
 Once the server is up and running, visit http://localhost:8000 in your web browser to access the site.
 
 API Integration
