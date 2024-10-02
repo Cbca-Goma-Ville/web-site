@@ -1,64 +1,62 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+CBCA Goma Ville - Church Information Website
+This is the official website for CBCA Goma Ville, a Laravel project that consumes an external API to load church information. This guide will help you set up and run the project locally.
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Get Started
+Requirements
+Before getting started, ensure you have the following installed on your machine:
 
-## About Laravel
+PHP (version 8.0 or higher recommended)
+Composer (dependency manager for PHP)
+Laravel (version 8.x or higher)
+Installation
+Clone the repository:
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+bash
+Copy code
+git clone https://github.com/Cbca-Goma-Ville/web-site.git
+Navigate to the project directory:
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+bash
+Copy code
+cd web-site
+Install dependencies: Using Composer, install the necessary dependencies:
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+bash
+Copy code
+composer install
+Copy the .env.example to create your .env file:
 
-## Learning Laravel
+bash
+Copy code
+cp .env.example .env
+Generate the application key: This will set the application key in your .env file.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+bash
+Copy code
+php artisan key:generate
+Set up your environment variables: In your .env file, make sure to configure the following:
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+Database connection settings
+API base URL for the church information (if required)
+Any other relevant configurations (e.g., caching, queueing)
+Migrate the database (if the project uses a local database):
 
-## Laravel Sponsors
+bash
+Copy code
+php artisan migrate
+Running the Project
+To start the local development server, run the following command:
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+bash
+Copy code
+php artisan serve
+Once the server is up and running, visit http://localhost:8000 in your web browser to access the site.
 
-### Premium Partners
+API Integration
+This project consumes a RESTful API at api.cbcagomaville.org to fetch and display church-related information. The API is configured via the config/app.php file. Make sure the API is accessible and the base URL is correctly set.
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[CMS Max](https://www.cmsmax.com/)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
+Contributing
+If you'd like to contribute to the project, please fork the repository, make your changes, and submit a pull request. We appreciate your input!
 
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+License
+This project is open-sourced under the MIT license.
